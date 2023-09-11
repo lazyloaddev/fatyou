@@ -17,12 +17,12 @@ struct FontBuilder {
         customFont: CustomFonts,
         fontSize: Double,
         weight: Font.Weight = .regular,
-        letterSpacing: Double = 1,
+        letterSpacing: Double = 0,
         lineHeight: Double
     ) {
         self.font = Font.custom(customFont, size: fontSize).weight(weight)
         self.tracking = fontSize * letterSpacing
-        
+
         let uiFont = UIFont(name: customFont.rawValue, size: fontSize) ?? .systemFont(ofSize: fontSize)
         self.lineSpacing = lineHeight - uiFont.lineHeight
         self.verticalPadding = self.lineSpacing / 2
@@ -83,3 +83,79 @@ extension Font {
     }
     
 }
+
+
+struct CustomFontsModifire: ViewModifier {
+
+    private let fontBuilder: FontBuilder
+
+    init(_ fontBuilder: FontBuilder) {
+        self.fontBuilder = fontBuilder
+    }
+
+    func body(content: Content) -> some View {
+        content
+            .font(fontBuilder.font)
+            .lineSpacing(fontBuilder.lineSpacing)
+            .padding([.vertical], fontBuilder.verticalPadding)
+            .tracking(fontBuilder.tracking)
+    }
+
+}
+
+extension View {
+
+    func customFont(_ fontBuilder: FontBuilder) -> some View {
+        modifier(CustomFontsModifire(fontBuilder))
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//struct CustomFontsModifier: ViewModifier {
+//
+//    private let fontBuilder: FontBuilder
+//
+//    init(_ fontBuilder: FontBuilder) {
+//        self.fontBuilder = fontBuilder
+//    }
+//
+//    func body(content: Content) -> some View {
+//        content
+//            .font(fontBuilder.font)
+//            .lineSpacing(fontBuilder.lineSpacing)
+//            .padding([.vertical], fontBuilder.verticalPadding)
+//            .tracking(fontBuilder.tracking)
+//    }
+//}
+//
+//extension View {
+//
+//    func customFont(_ fontBuilder: FontBuilder) -> some View {
+//        modifier(CustomFontsModifier(fontBuilder))
+//    }
+//
+//}

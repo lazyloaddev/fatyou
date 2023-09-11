@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F5BDAA722AAF46CD009FB33D /* FatYouApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDAA712AAF46CD009FB33D /* FatYouApp.swift */; };
-		F5BDAA742AAF46CD009FB33D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDAA732AAF46CD009FB33D /* ContentView.swift */; };
 		F5BDAA792AAF46CF009FB33D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5BDAA782AAF46CF009FB33D /* Preview Assets.xcassets */; };
 		F5BDAAA52AAF475C009FB33D /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDAA832AAF475C009FB33D /* CustomColors.swift */; };
 		F5BDAAA62AAF475C009FB33D /* PreviewAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5BDAA852AAF475C009FB33D /* PreviewAssets.xcassets */; };
@@ -38,12 +37,14 @@
 		F5BDAABE2AAF475C009FB33D /* Ubuntu-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5BDAAA12AAF475C009FB33D /* Ubuntu-Italic.ttf */; };
 		F5BDAABF2AAF475C009FB33D /* CustomIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDAAA32AAF475C009FB33D /* CustomIcons.swift */; };
 		F5BDAAC02AAF475C009FB33D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5BDAAA42AAF475C009FB33D /* Assets.xcassets */; };
+		F5BDAAC72AAF49FC009FB33D /* MainFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDAAC62AAF49FC009FB33D /* MainFlow.swift */; };
+		F5BDAAC92AAF4A1F009FB33D /* FoodFiaryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDAAC82AAF4A1F009FB33D /* FoodFiaryScreen.swift */; };
+		F5BDAACD2AAF4AB9009FB33D /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDAACC2AAF4AB9009FB33D /* RoundedCorner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F5BDAA6E2AAF46CD009FB33D /* FatYou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FatYou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5BDAA712AAF46CD009FB33D /* FatYouApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatYouApp.swift; sourceTree = "<group>"; };
-		F5BDAA732AAF46CD009FB33D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F5BDAA782AAF46CF009FB33D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F5BDAA832AAF475C009FB33D /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		F5BDAA852AAF475C009FB33D /* PreviewAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PreviewAssets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +75,9 @@
 		F5BDAAA32AAF475C009FB33D /* CustomIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomIcons.swift; sourceTree = "<group>"; };
 		F5BDAAA42AAF475C009FB33D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../BaseIosApp/BaseIosApp/Resources/Assets.xcassets; sourceTree = "<group>"; };
 		F5BDAAC12AAF4802009FB33D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5BDAAC62AAF49FC009FB33D /* MainFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlow.swift; sourceTree = "<group>"; };
+		F5BDAAC82AAF4A1F009FB33D /* FoodFiaryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodFiaryScreen.swift; sourceTree = "<group>"; };
+		F5BDAACC2AAF4AB9009FB33D /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,8 +149,9 @@
 		F5BDAA812AAF4717009FB33D /* App */ = {
 			isa = PBXGroup;
 			children = (
+				F5BDAAC32AAF495F009FB33D /* Entity */,
+				F5BDAAC22AAF494E009FB33D /* UI */,
 				F5BDAA712AAF46CD009FB33D /* FatYouApp.swift */,
-				F5BDAA732AAF46CD009FB33D /* ContentView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -228,6 +233,47 @@
 				F5BDAAA32AAF475C009FB33D /* CustomIcons.swift */,
 			);
 			path = Icons;
+			sourceTree = "<group>";
+		};
+		F5BDAAC22AAF494E009FB33D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F5BDAACA2AAF4A8B009FB33D /* Compononents */,
+				F5BDAAC52AAF4985009FB33D /* Flows */,
+				F5BDAAC42AAF497D009FB33D /* Screens */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F5BDAAC32AAF495F009FB33D /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		F5BDAAC42AAF497D009FB33D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F5BDAAC82AAF4A1F009FB33D /* FoodFiaryScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		F5BDAAC52AAF4985009FB33D /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				F5BDAAC62AAF49FC009FB33D /* MainFlow.swift */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		F5BDAACA2AAF4A8B009FB33D /* Compononents */ = {
+			isa = PBXGroup;
+			children = (
+				F5BDAACC2AAF4AB9009FB33D /* RoundedCorner.swift */,
+			);
+			path = Compononents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,11 +370,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5BDAA742AAF46CD009FB33D /* ContentView.swift in Sources */,
 				F5BDAAAE2AAF475C009FB33D /* CustomFonts.swift in Sources */,
 				F5BDAAA52AAF475C009FB33D /* CustomColors.swift in Sources */,
+				F5BDAAC72AAF49FC009FB33D /* MainFlow.swift in Sources */,
+				F5BDAAC92AAF4A1F009FB33D /* FoodFiaryScreen.swift in Sources */,
 				F5BDAA722AAF46CD009FB33D /* FatYouApp.swift in Sources */,
 				F5BDAABF2AAF475C009FB33D /* CustomIcons.swift in Sources */,
+				F5BDAACD2AAF4AB9009FB33D /* RoundedCorner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
