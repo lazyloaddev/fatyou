@@ -28,7 +28,7 @@ struct MainFlow: View {
                     .tag(MainFlowTab.foodDiary)
                 StatistictsFlow()
                     .tag(MainFlowTab.statisticts)
-            }.background(Color(.lightBg))
+            }
             TabBar(currentTab: $currentTab, buttons: buttons)
         }
     }
@@ -73,15 +73,15 @@ private struct TabBar: View {
 private struct TabBarButtonConfiguration: Identifiable {
     var id: MainFlowTab { tab }
 
-    let icon: CustomIcons
+    let icon: ImageResource
     let title: String
     let tab: MainFlowTab
 }
 
 private struct TabBarButtonStyle {
 
-    let backgroundColor: CustomColors
-    let foregroundColor: CustomColors
+    let backgroundColor: ColorResource
+    let foregroundColor: ColorResource
 
     static let active = TabBarButtonStyle(backgroundColor: .white, foregroundColor: .mainText)
     static let unactive = TabBarButtonStyle(backgroundColor: .warning, foregroundColor: .white)

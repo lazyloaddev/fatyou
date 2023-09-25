@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct FoodDiaryScreen: View {
-
     var body: some View {
         ScrollView  {
             VStack(spacing: 0) {
@@ -12,7 +11,11 @@ struct FoodDiaryScreen: View {
                     Text("qwe")
                     Text("qwe")
                     Text("qwe")
-                }.background(Color(.white))
+                }
+                .background(Color(.white))
+                GeometryReader { proxy in
+                    Color.white.frame(height: proxy.bounds(of: .scrollView)?.height ?? 0)
+                }
             }
         }
         .background(Color(.lightBg))
@@ -27,11 +30,21 @@ struct FoodDiaryScreen: View {
                 Button {
                     print("open calendar")
                 } label: {
-                    Image(CustomIcons.calendar).foregroundColor(Color(.mainText))
+                    Image(.calendar).foregroundColor(Color(.mainText))
                 }
 
             }
-        }.navigationBarTitleDisplayMode(.inline)
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+            let appearance = UINavigationBarAppearance()
+            appearance.shadowColor = .clear
+            appearance.backgroundColor = UIColor(resource: .lightBg)
+            UINavigationBar.appearance().standardAppearance = appearance
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+            UINavigationBar.appearance().compactAppearance = appearance
+            UINavigationBar.appearance().compactScrollEdgeAppearance = appearance
+        }
     }
 
 }
