@@ -7,12 +7,15 @@ struct FoodDiaryScreen: View {
                 CaloryInfo()
                     .padding(EdgeInsets(top: 20, leading: 16, bottom: 0, trailing: 16))
                 LazyVStack(spacing: 0) {
-                    Text("qwe")
-                    Text("qwe")
-                    Text("qwe")
-                    Text("qwe")
+                    CaloryRow()
+                    CaloryRow()
+                    CaloryRow()
+                    CaloryRow()
                 }
-                .background(Color(.white))
+                .background(
+                    Color(.white)
+                        .shadow(color: Color(.shadow), radius: 12, y: 12)
+                )
                 GeometryReader { proxy in
                     Color.white.frame(height: proxy.bounds(of: .scrollView)?.height ?? 0)
                 }
@@ -126,6 +129,24 @@ private struct PacmanProgress: View {
             .frame(maxWidth: .infinity, alignment: .trailing)
         }
         .frame(height: headSize)
+    }
+}
+
+private struct CaloryRow: View {
+    var body: some View {
+        VStack(spacing: 0) {
+            HStack(spacing: 0) {
+                Text("Fried eggs with ham, 2 eggs")
+                Spacer()
+                Text("235 cal").padding(.trailing, 4)
+                Image(.more).foregroundStyle(Color(.grayBg))
+            }
+                .customFont(.bodyText)
+                .foregroundStyle(Color(.mainText))
+                .padding(.leading, 20)
+                .frame(height: 59)
+            Divider().background(Color(.grayBg))
+        }
     }
 }
 
