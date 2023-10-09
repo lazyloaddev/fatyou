@@ -1,6 +1,16 @@
 import SwiftUI
 
 struct FoodDiaryScreen: View {
+    @State
+    private var currentDate = Date.now
+    private let dateFormatter: DateFormatter
+
+    init() {
+        self.dateFormatter = DateFormatter()
+        // https://nsdateformatter.com/
+        dateFormatter.dateFormat = "EEEE, MMMM d"
+    }
+
     var body: some View {
         ScrollView  {
             VStack(spacing: 0) {
@@ -25,17 +35,20 @@ struct FoodDiaryScreen: View {
         .toolbar {
             ToolbarItem(placement: .principal) {
                 VStack(spacing: -2) {
-                    Text("Today").customFont(.h2)
-                    Text("Monday, march 2").customFont(.screenSubtitle)
+                    Text(currentDayLabel()).customFont(.h2)
+                    Text(currentDate, formatter: dateFormatter).customFont(.screenSubtitle)
                 }
             }
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
-                    print("open calendar")
-                } label: {
-                    Image(.calendar).foregroundColor(Color(.mainText))
-                }
-
+                Image(.calendar)
+                    .foregroundColor(Color(.mainText))
+                    .overlay {
+                        DatePicker(
+                            "",
+                            selection: $currentDate,
+                            displayedComponents: [.date]
+                        ).blendMode(.destinationOver)
+                    }
             }
         }
         .navigationBarTitleDisplayMode(.inline)
@@ -47,6 +60,18 @@ struct FoodDiaryScreen: View {
             UINavigationBar.appearance().scrollEdgeAppearance = appearance
             UINavigationBar.appearance().compactAppearance = appearance
             UINavigationBar.appearance().compactScrollEdgeAppearance = appearance
+        }
+    }
+
+    private func currentDayLabel() -> String {
+        if Calendar.current.isDateInToday(currentDate) {
+            "Today"
+        } else if Calendar.current.isDateInTomorrow(currentDate) {
+            "Tomorrow"
+        } else if Calendar.current.isDateInYesterday(currentDate) {
+            "Yesterday"
+        } else {
+            "Past"
         }
     }
 
