@@ -1,4 +1,5 @@
 import SwiftUI
+import SwipeActions
 
 struct FoodDiaryScreen: View {
     @State
@@ -18,6 +19,28 @@ struct FoodDiaryScreen: View {
                     .padding(EdgeInsets(top: 20, leading: 16, bottom: 0, trailing: 16))
                 LazyVStack(spacing: 0) {
                     CaloryRow()
+                        .addSwipeAction(edge: .trailing) {
+                            Button(
+                                action: {},
+                                label: {
+                                    Image(.edit)
+                                        .frame(width: 60, height: 60, alignment: .center)
+                                        .background(Color(.warning))
+                                        .foregroundColor(Color(.white))
+                                }
+                            )
+
+                            Button(
+                                action: {},
+                                label: {
+                                    Image(.trash)
+                                        .frame(width: 60, height: 60, alignment: .center)
+                                        .foregroundColor(Color(.white))
+                                        .background(Color(.accent))
+                                }
+                            )
+
+                        }
                     CaloryRow()
                     CaloryRow()
                     CaloryRow()
@@ -166,10 +189,10 @@ private struct CaloryRow: View {
                 Text("235 cal").padding(.trailing, 4)
                 Image(.more).foregroundStyle(Color(.grayBg))
             }
-                .customFont(.bodyText)
-                .foregroundStyle(Color(.mainText))
-                .padding(.leading, 20)
-                .frame(height: 59)
+            .customFont(.bodyText)
+            .foregroundStyle(Color(.mainText))
+            .padding(.leading, 20)
+            .frame(height: 59)
             Divider().background(Color(.grayBg))
         }
     }

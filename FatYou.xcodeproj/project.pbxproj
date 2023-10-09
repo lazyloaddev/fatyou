@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F51A64A92AD3D83F007CF9CC /* SwipeActions in Frameworks */ = {isa = PBXBuildFile; productRef = F51A64A82AD3D83F007CF9CC /* SwipeActions */; };
 		F57B946D2AB82F1D00D3580F /* FoodDiaryFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57B946C2AB82F1D00D3580F /* FoodDiaryFlow.swift */; };
 		F57B946F2AB82F3800D3580F /* StatistictsFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57B946E2AB82F3800D3580F /* StatistictsFlow.swift */; };
 		F5BDAA722AAF46CD009FB33D /* FatYouApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDAA712AAF46CD009FB33D /* FatYouApp.swift */; };
@@ -85,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F51A64A92AD3D83F007CF9CC /* SwipeActions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +278,9 @@
 			dependencies = (
 			);
 			name = FatYou;
+			packageProductDependencies = (
+				F51A64A82AD3D83F007CF9CC /* SwipeActions */,
+			);
 			productName = FatYou;
 			productReference = F5BDAA6E2AAF46CD009FB33D /* FatYou.app */;
 			productType = "com.apple.product-type.application";
@@ -304,6 +309,9 @@
 				Base,
 			);
 			mainGroup = F5BDAA652AAF46CD009FB33D;
+			packageReferences = (
+				F51A64A72AD3D83F007CF9CC /* XCRemoteSwiftPackageReference "SwipeActions" */,
+			);
 			productRefGroup = F5BDAA6F2AAF46CD009FB33D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -565,6 +573,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F51A64A72AD3D83F007CF9CC /* XCRemoteSwiftPackageReference "SwipeActions" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/c-villain/SwipeActions";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F51A64A82AD3D83F007CF9CC /* SwipeActions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F51A64A72AD3D83F007CF9CC /* XCRemoteSwiftPackageReference "SwipeActions" */;
+			productName = SwipeActions;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F5BDAA662AAF46CD009FB33D /* Project object */;
 }
