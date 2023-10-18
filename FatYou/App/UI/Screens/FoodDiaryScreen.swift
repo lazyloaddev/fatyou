@@ -4,6 +4,8 @@ import SwipeActions
 struct FoodDiaryScreen: View {
     @State
     private var currentDate = Date.now
+    @State
+    private var isSearchFoodPresented = false
     private let dateFormatter: DateFormatter
 
     init() {
@@ -15,7 +17,7 @@ struct FoodDiaryScreen: View {
     var body: some View {
         ScrollView  {
             VStack(spacing: 0) {
-                CaloryInfo()
+                CaloryInfo(onAddFoodRecord: { isSearchFoodPresented = true })
                     .padding(EdgeInsets(top: 20, leading: 16, bottom: 0, trailing: 16))
                 LazyVStack(spacing: 0) {
                     CaloryRow()
@@ -84,6 +86,9 @@ struct FoodDiaryScreen: View {
             UINavigationBar.appearance().compactAppearance = appearance
             UINavigationBar.appearance().compactScrollEdgeAppearance = appearance
         }
+        .fullScreenCover(isPresented: $isSearchFoodPresented) {
+            FoodSearchScreen(onClose: { isSearchFoodPresented = false })
+        }
     }
 
     private func currentDayLabel() -> String {
@@ -104,6 +109,7 @@ private struct CaloryInfo: View {
 
     @State
     private var isCollapsed = false
+    let onAddFoodRecord: () -> Void
 
     var body: some View {
         VStack(spacing: 0) {
@@ -125,7 +131,7 @@ private struct CaloryInfo: View {
                 Spacer()
 
                 Button  {
-
+                    onAddFoodRecord()
                 } label: {
                     Text("Add Food")
                         .customFont(.smallButtonTxt)

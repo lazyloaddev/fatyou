@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F51A64A92AD3D83F007CF9CC /* SwipeActions in Frameworks */ = {isa = PBXBuildFile; productRef = F51A64A82AD3D83F007CF9CC /* SwipeActions */; };
+		F538AB682ADE8FF600D4BC7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F538AB672ADE8FF600D4BC7B /* Assets.xcassets */; };
+		F541CB542ADD1DA10084424C /* FoodSearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F541CB532ADD1DA10084424C /* FoodSearchScreen.swift */; };
 		F57B946D2AB82F1D00D3580F /* FoodDiaryFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57B946C2AB82F1D00D3580F /* FoodDiaryFlow.swift */; };
 		F57B946F2AB82F3800D3580F /* StatistictsFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57B946E2AB82F3800D3580F /* StatistictsFlow.swift */; };
 		F5BDAA722AAF46CD009FB33D /* FatYouApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDAA712AAF46CD009FB33D /* FatYouApp.swift */; };
@@ -37,13 +39,14 @@
 		F5BDAABC2AAF475C009FB33D /* Ubuntu-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5BDAA9F2AAF475C009FB33D /* Ubuntu-Bold.ttf */; };
 		F5BDAABD2AAF475C009FB33D /* Ubuntu-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5BDAAA02AAF475C009FB33D /* Ubuntu-BoldItalic.ttf */; };
 		F5BDAABE2AAF475C009FB33D /* Ubuntu-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5BDAAA12AAF475C009FB33D /* Ubuntu-Italic.ttf */; };
-		F5BDAAC02AAF475C009FB33D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5BDAAA42AAF475C009FB33D /* Assets.xcassets */; };
 		F5BDAAC72AAF49FC009FB33D /* MainFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDAAC62AAF49FC009FB33D /* MainFlow.swift */; };
 		F5BDAAC92AAF4A1F009FB33D /* FoodDiaryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDAAC82AAF4A1F009FB33D /* FoodDiaryScreen.swift */; };
 		F5BDAACD2AAF4AB9009FB33D /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDAACC2AAF4AB9009FB33D /* RoundedCorner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F538AB672ADE8FF600D4BC7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F541CB532ADD1DA10084424C /* FoodSearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchScreen.swift; sourceTree = "<group>"; };
 		F57B946C2AB82F1D00D3580F /* FoodDiaryFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDiaryFlow.swift; sourceTree = "<group>"; };
 		F57B946E2AB82F3800D3580F /* StatistictsFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatistictsFlow.swift; sourceTree = "<group>"; };
 		F5BDAA6E2AAF46CD009FB33D /* FatYou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FatYou.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,7 +77,6 @@
 		F5BDAA9F2AAF475C009FB33D /* Ubuntu-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Bold.ttf"; sourceTree = "<group>"; };
 		F5BDAAA02AAF475C009FB33D /* Ubuntu-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-BoldItalic.ttf"; sourceTree = "<group>"; };
 		F5BDAAA12AAF475C009FB33D /* Ubuntu-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Italic.ttf"; sourceTree = "<group>"; };
-		F5BDAAA42AAF475C009FB33D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../BaseIosApp/BaseIosApp/Resources/Assets.xcassets; sourceTree = "<group>"; };
 		F5BDAAC12AAF4802009FB33D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5BDAAC62AAF49FC009FB33D /* MainFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlow.swift; sourceTree = "<group>"; };
 		F5BDAAC82AAF4A1F009FB33D /* FoodDiaryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDiaryScreen.swift; sourceTree = "<group>"; };
@@ -131,7 +133,7 @@
 		F5BDAA7F2AAF4708009FB33D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F5BDAAA42AAF475C009FB33D /* Assets.xcassets */,
+				F538AB672ADE8FF600D4BC7B /* Assets.xcassets */,
 				F5BDAA862AAF475C009FB33D /* Fonts */,
 				F5BDAA842AAF475C009FB33D /* PreviewContent */,
 			);
@@ -240,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				F5BDAAC82AAF4A1F009FB33D /* FoodDiaryScreen.swift */,
+				F541CB532ADD1DA10084424C /* FoodSearchScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				F5BDAABE2AAF475C009FB33D /* Ubuntu-Italic.ttf in Resources */,
 				F5BDAAA62AAF475C009FB33D /* PreviewAssets.xcassets in Resources */,
 				F5BDAAA82AAF475C009FB33D /* MPLUSRounded1c-Bold.ttf in Resources */,
+				F538AB682ADE8FF600D4BC7B /* Assets.xcassets in Resources */,
 				F5BDAABA2AAF475C009FB33D /* Roboto-Black.ttf in Resources */,
 				F5BDAABD2AAF475C009FB33D /* Ubuntu-BoldItalic.ttf in Resources */,
 				F5BDAAB02AAF475C009FB33D /* Roboto-Light.ttf in Resources */,
@@ -351,7 +355,6 @@
 				F5BDAABC2AAF475C009FB33D /* Ubuntu-Bold.ttf in Resources */,
 				F5BDAABB2AAF475C009FB33D /* Ubuntu-Regular.ttf in Resources */,
 				F5BDAA792AAF46CF009FB33D /* Preview Assets.xcassets in Resources */,
-				F5BDAAC02AAF475C009FB33D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +372,7 @@
 				F5BDAA722AAF46CD009FB33D /* FatYouApp.swift in Sources */,
 				F5BDAACD2AAF4AB9009FB33D /* RoundedCorner.swift in Sources */,
 				F57B946D2AB82F1D00D3580F /* FoodDiaryFlow.swift in Sources */,
+				F541CB542ADD1DA10084424C /* FoodSearchScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

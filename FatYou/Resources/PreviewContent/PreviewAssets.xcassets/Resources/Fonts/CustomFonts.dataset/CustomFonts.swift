@@ -65,14 +65,7 @@ extension FontBuilder {
         weight: .regular,
         lineHeight: 24
     )
-
-    static let bodyTextSmall = FontBuilder(
-        customFont: .ubuntu,
-        fontSize: 16,
-        weight: .regular,
-        lineHeight: 22
-    )
-
+    
     static let bottomBarText = FontBuilder(
         customFont: .roundedMplus1c,
         fontSize: 12,
@@ -86,23 +79,6 @@ extension FontBuilder {
         weight: .regular,
         lineHeight: 24
     )
-
-    static let buttonText = FontBuilder(
-        customFont: .roundedMplus1c,
-        fontSize: 18,
-        weight: .heavy,
-        lineHeight: 24
-    )
-
-    static let bodyAccsent = FontBuilder(
-        customFont: .ubuntu,
-        fontSize: 18,
-        weight: .medium,
-        letterSpacing: -0.01,
-        lineHeight: 24
-    )
-
-
 
 }
 
