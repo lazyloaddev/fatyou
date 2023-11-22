@@ -1,20 +1,28 @@
 import SwiftUI
 
+enum FoodPath: Hashable {
+    case newFood
+}
+
 struct FoodSearchScreen: View {
     @State
     private var searchText = ""
+    @State
+    private var navPath = [FoodPath]()
     let onClose: () -> Void
 
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $navPath) {
             ZStack {
                 SearchResultList()
-                SaveButtonView()
+                SaveButtonView(action: {
+                    navPath.append(.newFood)
+                })
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color(.lightBg))
+            .background(Color(.white))
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
@@ -45,6 +53,14 @@ struct FoodSearchScreen: View {
                 UINavigationBar.appearance().scrollEdgeAppearance = appearance
                 UINavigationBar.appearance().compactAppearance = appearance
                 UINavigationBar.appearance().compactScrollEdgeAppearance = appearance
+            }
+            .navigationDestination(for: FoodPath.self) { path in
+                switch path {
+                case .newFood:
+                    NewFoodScreen(onClose: {
+                        navPath.removeLast()
+                    })
+                }
             }
         }
     }
@@ -81,36 +97,49 @@ private struct SearchFieldView: View {
 }
 
 private struct SaveButtonView: View {
+    let action: () -> Void
+
     var body: some View {
         Button {
-
+            action()
         } label: {
             Text("SAVE")
-                .customFont(.buttonText)
-                .foregroundStyle(Color(.white))
-                .padding([.top, .bottom], 15.0)
-                .frame(maxWidth: .infinity)
-                .background(Color(.accent))
-                .clipShape(RoundedCorner(radius: 10))
         }
+        .buttonStyle(AccentButtonStyle())
         .padding([.leading, .trailing], 16.0)
     }
 }
 
 private struct SearchResultList: View {
+    @State var selectedRow: Int?
+
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 0) {
                 SearchResultHeader(title: "RECENT")
-                ForEach(0...100, id: \.self) { _ in
+                ForEach(0...100, id: \.self) { row in
+                    let selected = selectedRow == row
                     let data = SearchResultRowData(
                         title: "Fried eggs with ham",
                         caloryTitle: "100 g",
                         caloryAmount: "235 kcal"
                     )
-                    SearchResultRow(data: data)
+                    SearchResultRow(
+                        data: data,
+                        isSelected: selected,
+                        onSelect: {
+                            if selectedRow != row {
+                                selectedRow = row
+                            } else {
+                                selectedRow = nil
+                            }
+                        }
+                    )
                 }
-            }
+                GeometryReader { proxy in
+                    Color(.lightBg).frame(height: proxy.bounds(of: .scrollView)?.height ?? 0)
+                }
+            }.padding([.bottom], 60)
         }
     }
 }
@@ -137,10 +166,14 @@ private struct SearchResultRowData {
 
 private struct SearchResultRow: View {
 
+    @State
+    private var isExpanded = false
     let data: SearchResultRowData
+    let isSelected: Bool
+    let onSelect: () -> Void
 
     var body: some View {
-        VStack(spacing: 0) {
+        VStack(alignment: .leading, spacing: 0) {
             HStack(alignment: .center, spacing: 0) {
                 VStack(alignment: .leading, spacing: 0) {
                     Text(data.title)
@@ -151,8 +184,16 @@ private struct SearchResultRow: View {
                         Text(data.caloryTitle)
                             .frame(minWidth: 40)
                             .padding(.trailing, 8)
-                        Image(.downSmall)
-                            .padding(.trailing, 24)
+                        Button {
+                            withAnimation {
+                                isExpanded.toggle()
+                            }
+                        } label: {
+                            Image(.downSmall)
+                                .rotationEffect(isExpanded ? .degrees(180) : .zero)
+                                .padding(.trailing, 24)
+                        }
+
                         Text(data.caloryAmount).layoutPriority(1)
                     }
                     .customFont(.bodyTextSmall)
@@ -161,16 +202,26 @@ private struct SearchResultRow: View {
                 .foregroundStyle(Color(.mainText))
                 .padding(EdgeInsets(top: 20, leading: 20, bottom: 10, trailing: 0))
                 Spacer()
-                Image(.unchecked)
-                    .padding([.leading, .trailing], 16)
-                    .layoutPriority(1)
-            }.background(Color(.white))
+                Button(
+                    action: onSelect,
+                    label: {
+                        Image(isSelected ? .warning : .unchecked)
+                            .padding([.leading, .trailing], 16)
+                            .layoutPriority(1)
+                    }
+                )
+
+            }
+            StepperView()
+                .padding(EdgeInsets(top: 0, leading: 20, bottom: 17, trailing: 0))
+                .frame(maxHeight: isExpanded ? .infinity : 0)
+                .opacity(isExpanded ? 1 : 0)
+                .clipped()
             Divider().background(Color(.lightBg))
-        }
+        }.background(Color(isExpanded ? .lightGrayBg : .white))
     }
 
 }
-
 
 #Preview {
     FoodSearchScreen(onClose: {})

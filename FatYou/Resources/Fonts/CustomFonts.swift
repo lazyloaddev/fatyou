@@ -38,13 +38,20 @@ extension FontBuilder {
         lineHeight: 24
     )
     
+    static let h1 = FontBuilder(
+        customFont: .roundedMplus1c,
+        fontSize: 24,
+        weight: .heavy,
+        lineHeight: 28
+    )
+
     static let h2 = FontBuilder(
         customFont: .roundedMplus1c,
         fontSize: 18,
         weight: .heavy,
         lineHeight: 26
     )
-    
+
     static let screenSubtitle = FontBuilder(
         customFont: .roboto,
         fontSize: 14,

@@ -10,8 +10,12 @@
 		F51A64A92AD3D83F007CF9CC /* SwipeActions in Frameworks */ = {isa = PBXBuildFile; productRef = F51A64A82AD3D83F007CF9CC /* SwipeActions */; };
 		F538AB682ADE8FF600D4BC7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F538AB672ADE8FF600D4BC7B /* Assets.xcassets */; };
 		F541CB542ADD1DA10084424C /* FoodSearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F541CB532ADD1DA10084424C /* FoodSearchScreen.swift */; };
+		F55977842AE62D0400D47DA8 /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55977832AE62D0400D47DA8 /* StepperView.swift */; };
+		F55977862AE634F900D47DA8 /* NewFoodScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55977852AE634F900D47DA8 /* NewFoodScreen.swift */; };
+		F55977892AE6407900D47DA8 /* AccentButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55977882AE6407900D47DA8 /* AccentButtonStyle.swift */; };
 		F57B946D2AB82F1D00D3580F /* FoodDiaryFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57B946C2AB82F1D00D3580F /* FoodDiaryFlow.swift */; };
 		F57B946F2AB82F3800D3580F /* StatistictsFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57B946E2AB82F3800D3580F /* StatistictsFlow.swift */; };
+		F58F00652AEF8CDC0029B14A /* AccentSmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F00642AEF8CDC0029B14A /* AccentSmallButton.swift */; };
 		F5BDAA722AAF46CD009FB33D /* FatYouApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDAA712AAF46CD009FB33D /* FatYouApp.swift */; };
 		F5BDAA792AAF46CF009FB33D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5BDAA782AAF46CF009FB33D /* Preview Assets.xcassets */; };
 		F5BDAAA62AAF475C009FB33D /* PreviewAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5BDAA852AAF475C009FB33D /* PreviewAssets.xcassets */; };
@@ -42,13 +46,18 @@
 		F5BDAAC72AAF49FC009FB33D /* MainFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDAAC62AAF49FC009FB33D /* MainFlow.swift */; };
 		F5BDAAC92AAF4A1F009FB33D /* FoodDiaryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDAAC82AAF4A1F009FB33D /* FoodDiaryScreen.swift */; };
 		F5BDAACD2AAF4AB9009FB33D /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDAACC2AAF4AB9009FB33D /* RoundedCorner.swift */; };
+		F5C870842AEF831A00ACF80C /* StatistictsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C870832AEF831A00ACF80C /* StatistictsScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F538AB672ADE8FF600D4BC7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F541CB532ADD1DA10084424C /* FoodSearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchScreen.swift; sourceTree = "<group>"; };
+		F55977832AE62D0400D47DA8 /* StepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
+		F55977852AE634F900D47DA8 /* NewFoodScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFoodScreen.swift; sourceTree = "<group>"; };
+		F55977882AE6407900D47DA8 /* AccentButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentButtonStyle.swift; sourceTree = "<group>"; };
 		F57B946C2AB82F1D00D3580F /* FoodDiaryFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDiaryFlow.swift; sourceTree = "<group>"; };
 		F57B946E2AB82F3800D3580F /* StatistictsFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatistictsFlow.swift; sourceTree = "<group>"; };
+		F58F00642AEF8CDC0029B14A /* AccentSmallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentSmallButton.swift; sourceTree = "<group>"; };
 		F5BDAA6E2AAF46CD009FB33D /* FatYou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FatYou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5BDAA712AAF46CD009FB33D /* FatYouApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatYouApp.swift; sourceTree = "<group>"; };
 		F5BDAA782AAF46CF009FB33D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -81,6 +90,7 @@
 		F5BDAAC62AAF49FC009FB33D /* MainFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlow.swift; sourceTree = "<group>"; };
 		F5BDAAC82AAF4A1F009FB33D /* FoodDiaryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDiaryScreen.swift; sourceTree = "<group>"; };
 		F5BDAACC2AAF4AB9009FB33D /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		F5C870832AEF831A00ACF80C /* StatistictsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatistictsScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +105,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F55977822AE62CF500D47DA8 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				F55977832AE62D0400D47DA8 /* StepperView.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		F55977872AE6406900D47DA8 /* ButtonStyles */ = {
+			isa = PBXGroup;
+			children = (
+				F55977882AE6407900D47DA8 /* AccentButtonStyle.swift */,
+				F58F00642AEF8CDC0029B14A /* AccentSmallButton.swift */,
+			);
+			path = ButtonStyles;
+			sourceTree = "<group>";
+		};
 		F5BDAA652AAF46CD009FB33D = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +251,8 @@
 		F5BDAAC22AAF494E009FB33D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F55977872AE6406900D47DA8 /* ButtonStyles */,
+				F55977822AE62CF500D47DA8 /* Elements */,
 				F5BDAACA2AAF4A8B009FB33D /* Compononents */,
 				F5BDAAC52AAF4985009FB33D /* Flows */,
 				F5BDAAC42AAF497D009FB33D /* Screens */,
@@ -243,6 +272,8 @@
 			children = (
 				F5BDAAC82AAF4A1F009FB33D /* FoodDiaryScreen.swift */,
 				F541CB532ADD1DA10084424C /* FoodSearchScreen.swift */,
+				F55977852AE634F900D47DA8 /* NewFoodScreen.swift */,
+				F5C870832AEF831A00ACF80C /* StatistictsScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -369,9 +400,14 @@
 				F57B946F2AB82F3800D3580F /* StatistictsFlow.swift in Sources */,
 				F5BDAAC72AAF49FC009FB33D /* MainFlow.swift in Sources */,
 				F5BDAAC92AAF4A1F009FB33D /* FoodDiaryScreen.swift in Sources */,
+				F55977862AE634F900D47DA8 /* NewFoodScreen.swift in Sources */,
+				F58F00652AEF8CDC0029B14A /* AccentSmallButton.swift in Sources */,
+				F5C870842AEF831A00ACF80C /* StatistictsScreen.swift in Sources */,
+				F55977842AE62D0400D47DA8 /* StepperView.swift in Sources */,
 				F5BDAA722AAF46CD009FB33D /* FatYouApp.swift in Sources */,
 				F5BDAACD2AAF4AB9009FB33D /* RoundedCorner.swift in Sources */,
 				F57B946D2AB82F1D00D3580F /* FoodDiaryFlow.swift in Sources */,
+				F55977892AE6407900D47DA8 /* AccentButtonStyle.swift in Sources */,
 				F541CB542ADD1DA10084424C /* FoodSearchScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

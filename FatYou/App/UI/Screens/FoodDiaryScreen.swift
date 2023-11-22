@@ -134,13 +134,9 @@ private struct CaloryInfo: View {
                     onAddFoodRecord()
                 } label: {
                     Text("Add Food")
-                        .customFont(.smallButtonTxt)
-                        .lineLimit(1)
-                        .foregroundColor(Color(.white))
-                        .padding(EdgeInsets(top: 8, leading: 14, bottom: 8, trailing: 14))
-                        .background(Color(.accent))
-                        .clipShape(RoundedCorner(radius: 10))
-                }.layoutPriority(1)
+                }
+                .layoutPriority(1)
+                .buttonStyle(AccentSmallButton())
             }
             // jdhsjfkd
 

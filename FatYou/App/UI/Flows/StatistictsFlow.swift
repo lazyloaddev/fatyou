@@ -2,7 +2,7 @@ import SwiftUI
 
 struct StatistictsFlow: View {
     var body: some View {
-        Text("Hello, StatistictsFlow!")
+        StatistictsScreen()
     }
 }
 
